@@ -6,7 +6,7 @@
 
   tasks:
    - name: ENABLE IPv6 Unicast Routing
-  ios_config:
+     ios_config:
        lines: ipv6 unicast-routing
 
    - name: SET Ethernet0/1 IPv6 ADDRESS 
@@ -35,3 +35,4 @@
      copy: 
        content: "{{ output.stdout[0] }}"
        dest: "ios_configurations/IPv6_output_{{ inventory_hostname }}.txt"
+
